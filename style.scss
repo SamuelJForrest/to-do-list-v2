@@ -48,12 +48,14 @@ table {
 
 body {
     font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
     .top {
         height: 20vh;
         width: 100%;
         display: flex;
         justify-content: center;
-        align-items: center;        
+        align-items: center;   
+        margin: -1px;     
         h1 {
         font-size: 6em;
         text-transform: uppercase;
@@ -61,10 +63,12 @@ body {
         }
     }
     .bottom {
-        height: 35vh;
+        height: 35.3vh;
         width: 100%;
         background-color: #511f73;
         position: relative;
+        overflow: hidden;
+        margin: -1px;
         .custom-shape-divider-top-1621369968 {
             position: absolute;
             top: 0;
@@ -73,23 +77,52 @@ body {
             overflow: hidden;
             line-height: 0;
             text-align: center;
+            margin: -1px;
             form {
                 display: flex;
                 justify-content: center;
-                transform: translateY(-75px);
+                transform: translateY(-120px);
                 input {
                     font-size: 2rem;
-                    width: 500px;
+                    width: 450px;
                     padding: 0.5rem;
                     border: none;
+                }
+                input:focus {
+                    outline: none;
+                    font-family: inherit;
                 }
                 button {
                     font-size: 2rem;
                     border: none;
                     background-color: white;
+                    margin-right: 25px;
                 }
                 button:hover {
                     cursor: pointer;
+                }
+                .select {
+                    position: relative;
+                    overflow: hidden;
+                    select {
+                        width: 12rem;
+                        font-size: 1.2rem;
+                        appearance: none;
+                        outline: none;
+                        border: none;
+                        cursor: pointer;
+                        padding: 1rem;
+                        font-family: inherit;
+                    }
+                }
+                .select::after {
+                    content: "\25BC";
+                    position: absolute;
+                    top: 50%;
+                    right: 10%;
+                    pointer-events: none;
+                    cursor: pointer;
+                    transition: all 300ms ease;
                 }
             }
         }
@@ -105,9 +138,67 @@ body {
             fill: #FFFFFF;
         }
     }
-    .text {
+    .note-section {
         height: 45vh;
         width: 100%;
         background-image: linear-gradient( #511f73, #8b79d9);
+        .note-container {
+            width: 35%;
+            height: 50vh;
+            background-color: rgba(0,0,0,0.25);
+            margin: 0 auto;
+            transform: translateY(-30%);
+            border-radius: 25px;
+            box-sizing: border-box;
+            overflow: auto;
+            .note {
+                box-sizing: border-box;
+                width: 90%;
+                height: 50px;
+                margin: 2.5% auto;
+                background-color: white;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-radius: 10px;
+                transition: transform 450ms ease, opacity 450ms ease;
+                .text-strike {
+                    text-decoration: line-through 3px;
+                }
+                p {
+                    text-align: center;
+                    width: 70%;
+                    font-size: 1.2em;
+                    margin: 0 15%;
+                }
+                .symbols {
+                    width: 30%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .tick {
+                        width: 20px;
+                        height: 100%;
+                        margin: 0 5%;
+                    }
+                    .cross {
+                        width: 15px;
+                        height: 100%;
+                        margin: 0 25%;
+                    }
+                    .tick, .cross {
+                        cursor: pointer;
+                    }
+                }
+            }
+            .white-out {
+                background-color: rgba(255,255,255, 0.5);
+            }
+            .remove {
+                transform: scale(0.01);
+                opacity: 0;
+            }
+        }
     }
 }
