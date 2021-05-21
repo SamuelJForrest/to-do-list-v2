@@ -213,8 +213,61 @@ body .note-section .note-container .note {
 }
 
 body .note-section .note-container .note .text-strike {
-  -webkit-text-decoration: line-through 3px;
-          text-decoration: line-through 3px;
+  position: relative;
+}
+
+body .note-section .note-container .note .text-strike::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  width: 70%;
+  height: 3px;
+  background: black;
+  -webkit-animation: text-strike 500ms ease-in-out forwards;
+          animation: text-strike 500ms ease-in-out forwards;
+}
+
+@-webkit-keyframes text-strike {
+  0% {
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  50% {
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  100% {
+    -webkit-transform-origin: 100% 50%;
+            transform-origin: 100% 50%;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@keyframes text-strike {
+  0% {
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  50% {
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  100% {
+    -webkit-transform-origin: 100% 50%;
+            transform-origin: 100% 50%;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
 }
 
 body .note-section .note-container .note p {
@@ -252,6 +305,15 @@ body .note-section .note-container .note .symbols .cross {
 
 body .note-section .note-container .note .symbols .tick, body .note-section .note-container .note .symbols .cross {
   cursor: pointer;
+}
+
+body .note-section .note-container .note::before {
+  -webkit-animation-name: text-strike;
+          animation-name: text-strike;
+  -webkit-animation-duration: 4000ms;
+          animation-duration: 4000ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 body .note-section .note-container .white-out {
