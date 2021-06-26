@@ -106,9 +106,18 @@ body .bottom .custom-shape-divider-top-1621369968 form {
           transform: translateY(-120px);
 }
 
+body .bottom .custom-shape-divider-top-1621369968 form .input-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 body .bottom .custom-shape-divider-top-1621369968 form input {
   font-size: 2rem;
-  width: 450px;
+  width: 300px;
   padding: 0.5rem;
   border: none;
 }
@@ -135,7 +144,7 @@ body .bottom .custom-shape-divider-top-1621369968 form .select {
 }
 
 body .bottom .custom-shape-divider-top-1621369968 form .select select {
-  width: 12rem;
+  width: 10rem;
   font-size: 1.2rem;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -178,11 +187,11 @@ body .note-section {
 
 body .note-section .note-container {
   width: 35%;
-  height: 50vh;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.25);
   margin: 0 auto;
-  -webkit-transform: translateY(-30%);
-          transform: translateY(-30%);
+  -webkit-transform: translateY(-25%);
+          transform: translateY(-25%);
   border-radius: 25px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -324,5 +333,278 @@ body .note-section .note-container .remove {
   -webkit-transform: scale(0.01);
           transform: scale(0.01);
   opacity: 0;
+}
+
+@media (max-width: 1300px) {
+  body {
+    font-family: 'Roboto', sans-serif;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#511f73), to(#8b79d9));
+    background-image: linear-gradient(#511f73, #8b79d9);
+    height: 100.1vh;
+  }
+  body .top {
+    height: 10vh;
+    background-color: transparent;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body .top h1 {
+    font-size: 2em;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: 1px solid white;
+  }
+  body .bottom {
+    height: 40vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+  }
+  body .bottom .custom-shape-divider-top-1621369968 {
+    background-color: transparent;
+    text-align: center;
+    margin: -1px;
+  }
+  body .bottom .custom-shape-divider-top-1621369968 svg {
+    display: none;
+  }
+  body .bottom .custom-shape-divider-top-1621369968 path {
+    display: none;
+  }
+  body .bottom .custom-shape-divider-top-1621369968 form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transform: translateY(-190px);
+            transform: translateY(-190px);
+  }
+  body .bottom .custom-shape-divider-top-1621369968 form .input-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    -webkit-transform: translate(15px, -30px);
+            transform: translate(15px, -30px);
+  }
+  body .bottom .custom-shape-divider-top-1621369968 form input {
+    font-size: 1rem;
+    width: 75%;
+    padding: 0.5rem;
+    border: none;
+  }
+  body .bottom .custom-shape-divider-top-1621369968 form input:focus {
+    outline: none;
+    font-family: inherit;
+  }
+  body .bottom .custom-shape-divider-top-1621369968 form button {
+    font-size: 2rem;
+    border: none;
+    background-color: white;
+    margin-right: 25px;
+  }
+  body .bottom .custom-shape-divider-top-1621369968 form button:hover {
+    cursor: pointer;
+  }
+  body .bottom .custom-shape-divider-top-1621369968 form .select {
+    position: relative;
+    overflow: hidden;
+    -webkit-transform: translate(5px, -10px);
+            transform: translate(5px, -10px);
+  }
+  body .bottom .custom-shape-divider-top-1621369968 form .select select {
+    font-size: .9rem;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: .5rem;
+    font-family: inherit;
+  }
+  body .bottom .custom-shape-divider-top-1621369968 form .select::after {
+    content: "\25BC";
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    pointer-events: none;
+    cursor: pointer;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+  }
+  body .bottom .custom-shape-divider-top-1621369968 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 240px;
+  }
+  body .bottom .custom-shape-divider-top-1621369968 .shape-fill {
+    fill: #FFFFFF;
+  }
+  body .note-section {
+    height: 40.5vh;
+    width: 100%;
+    background-image: none;
+  }
+  body .note-section .note-container {
+    width: 90%;
+    height: 150%;
+    margin: 0 auto;
+    border-radius: 25px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    overflow: auto;
+    -webkit-transform: translate(0, -30%);
+            transform: translate(0, -30%);
+  }
+  body .note-section .note-container .note {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 90%;
+    height: 50px;
+    margin: 2.5% auto;
+    background-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 10px;
+    -webkit-transition: opacity 450ms ease, -webkit-transform 450ms ease;
+    transition: opacity 450ms ease, -webkit-transform 450ms ease;
+    transition: transform 450ms ease, opacity 450ms ease;
+    transition: transform 450ms ease, opacity 450ms ease, -webkit-transform 450ms ease;
+  }
+  body .note-section .note-container .note .text-strike {
+    position: relative;
+  }
+  body .note-section .note-container .note .text-strike::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    width: 70%;
+    height: 3px;
+    background: black;
+    -webkit-animation: text-strike 500ms ease-in-out forwards;
+            animation: text-strike 500ms ease-in-out forwards;
+  }
+  @-webkit-keyframes text-strike {
+    0% {
+      -webkit-transform-origin: 0% 50%;
+              transform-origin: 0% 50%;
+      -webkit-transform: scaleX(0);
+              transform: scaleX(0);
+    }
+    50% {
+      -webkit-transform-origin: 0% 50%;
+              transform-origin: 0% 50%;
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+    }
+    100% {
+      -webkit-transform-origin: 100% 50%;
+              transform-origin: 100% 50%;
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+    }
+  }
+  @keyframes text-strike {
+    0% {
+      -webkit-transform-origin: 0% 50%;
+              transform-origin: 0% 50%;
+      -webkit-transform: scaleX(0);
+              transform: scaleX(0);
+    }
+    50% {
+      -webkit-transform-origin: 0% 50%;
+              transform-origin: 0% 50%;
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+    }
+    100% {
+      -webkit-transform-origin: 100% 50%;
+              transform-origin: 100% 50%;
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+    }
+  }
+  body .note-section .note-container .note p {
+    text-align: center;
+    width: 70%;
+    font-size: .8em;
+    margin: 0 15%;
+  }
+  body .note-section .note-container .note .symbols {
+    width: 35%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body .note-section .note-container .note .symbols .tick {
+    width: 15px;
+    height: 100%;
+    margin: 0 5%;
+  }
+  body .note-section .note-container .note .symbols .cross {
+    width: 10px;
+    height: 100%;
+    margin: 0 25%;
+  }
+  body .note-section .note-container .note .symbols .tick, body .note-section .note-container .note .symbols .cross {
+    cursor: pointer;
+  }
+  body .note-section .note-container .note::before {
+    -webkit-animation-name: text-strike;
+            animation-name: text-strike;
+    -webkit-animation-duration: 4000ms;
+            animation-duration: 4000ms;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  body .note-section .note-container .white-out {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  body .note-section .note-container .remove {
+    -webkit-transform: scale(0.01);
+            transform: scale(0.01);
+    opacity: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
